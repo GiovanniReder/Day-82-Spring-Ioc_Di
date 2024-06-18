@@ -4,16 +4,20 @@ import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.stereotype.Component;
 
 import java.util.List;
 @AllArgsConstructor
 @Getter
 @Setter
 @ToString
+@Component
 public class Menu {
     private List<Pizza> pizze;
     private List<Drinks> drinks;
     private List<Toppings> toppings;
+
 
 /*
     public Menu(List<Pizza> pizze, List<Toppings> toppings, List<Drinks> drinks) {

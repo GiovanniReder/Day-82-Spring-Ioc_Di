@@ -1,19 +1,18 @@
 package giovanni.demo_day_one;
 
 
-import giovanni.demo_day_one.entities.Drinks;
-import giovanni.demo_day_one.entities.Menu;
-import giovanni.demo_day_one.entities.Pizza;
-import giovanni.demo_day_one.entities.Toppings;
+import giovanni.demo_day_one.entities.*;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.PropertySource;
 
 
 import java.util.ArrayList;
 import java.util.List;
 
 @Configuration
-
+@PropertySource("application.properties")
 public class BeansConfig {
 
     @Bean
@@ -97,6 +96,13 @@ public class BeansConfig {
         toppingsList.add(getPineapple());
         return new Menu(pizzaList , drinkList ,toppingsList);
     }
+
+    @Bean
+    public double getCoperto(@Value("${costo.coperto}")  double coperto){
+        return coperto;
+    }
+
+
 
 }
 

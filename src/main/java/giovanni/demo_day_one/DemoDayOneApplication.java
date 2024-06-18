@@ -68,8 +68,8 @@ public class DemoDayOneApplication {
 		System.out.println(wine);
 
 */
-		Menu menu = (Menu) cxt.getBean("menu");
-		menu.getMenu();
+	//	Menu menu = (Menu) cxt.getBean("menu");
+	//	menu.getMenu();
 
 
 

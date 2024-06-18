@@ -14,3 +14,11 @@ public class Table {
     private int placeSetting;
     private boolean free;
 }
+/*
+* ogni ordine è associato ad un tavolo
+* numeroid
+* numero di coperti massimo
+* stato libero o occupato
+*
+*
+* */
