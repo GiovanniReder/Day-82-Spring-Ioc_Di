@@ -15,14 +15,14 @@ import java.util.List;
 @PropertySource("application.properties")
 public class BeansConfig {
 
-    @Bean
+    @Bean(name = "margherita")
     public Pizza getMargherita(){
         List<Toppings> toppingsLista = new ArrayList<>();
         toppingsLista.add(getCheese());
         return new Pizza("Margherita" , 4.99 , 1104 , toppingsLista );
     }
 
-    @Bean
+    @Bean(name = "hawaiana" )
     public Pizza getHawaiana(){
         List<Toppings> toppingsLista = new ArrayList<>();
         toppingsLista.add(getCheese());
@@ -31,7 +31,7 @@ public class BeansConfig {
         return new Pizza("Hawaiian", 6.49 , 1024 , toppingsLista);
     }
 
-    @Bean
+    @Bean(name = "salami" )
     public Pizza getSalami(){
         List<Toppings> toppingsLista = new ArrayList<>();
         toppingsLista.add(getCheese());
@@ -41,17 +41,17 @@ public class BeansConfig {
 
 
 
-    @Bean
+    @Bean(name = "lemonade")
     public Drinks getLemonade(){
-        return new Drinks("Lemonade" , 128 , 1.29);
+        return new Drinks("Lemonade" , 1.29 , 128);
     }
-    @Bean
+    @Bean(name = "water")
     public Drinks getWater(){
-        return new Drinks("water" , 0 , 1.29);
+        return new Drinks("water" , 1.29 , 0);
     }
-    @Bean
+    @Bean(name = "wine")
     public Drinks getWine(){
-        return new Drinks("Wine" , 607 , 7.49);
+        return new Drinks("Wine" , 7.49 , 609);
     }
 
 
@@ -94,7 +94,11 @@ public class BeansConfig {
         toppingsList.add(getSalame());
         toppingsList.add(getHam());
         toppingsList.add(getPineapple());
-        return new Menu(pizzaList , drinkList ,toppingsList);
+        return new Menu(pizzaList ,  toppingsList , drinkList);
+    }
+    @Bean
+    Table getTable (@Value("${costo.coperto}") double coperto){
+        return new Table( 1 ,5 , true);
     }
 
     @Bean

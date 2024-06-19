@@ -7,18 +7,19 @@ import giovanni.demo_day_one.entities.Menu;
 import giovanni.demo_day_one.entities.Pizza;
 
 import giovanni.demo_day_one.entities.Toppings;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
 @SpringBootApplication
-
+@Slf4j
 public class DemoDayOneApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.run(DemoDayOneApplication.class, args);
 
-		AnnotationConfigApplicationContext cxt = new AnnotationConfigApplicationContext(DemoDayOneApplication.class);
+	//	AnnotationConfigApplicationContext cxt = new AnnotationConfigApplicationContext(DemoDayOneApplication.class);
 /*
 		Pizza margherita = (Pizza) cxt.getBean("getMargherita");
 		Pizza hawaiana = (Pizza) cxt.getBean("getHawaiana");
@@ -80,7 +81,7 @@ public class DemoDayOneApplication {
 
 
 
-		cxt.close();
+
 
 
 	}

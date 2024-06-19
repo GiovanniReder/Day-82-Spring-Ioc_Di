@@ -1,16 +1,7 @@
 package giovanni.demo_day_one.entities;
 
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.Setter;
-import lombok.ToString;
 
 import java.util.List;
-
-@AllArgsConstructor
-@Getter
-@Setter
-@ToString
 
 public class Pizza {
     private String name;
@@ -27,7 +18,7 @@ public class Pizza {
     }
 
 
-   /*
+
 
     public String getName() {
         return name;
@@ -37,13 +28,7 @@ public class Pizza {
         this.name = name;
     }
 
-    public String getIngredients() {
-        return ingredients;
-    }
 
-    public void setIngredients(String ingredients) {
-        this.ingredients = ingredients;
-    }
 
     public int getCalories() {
         return calories;
@@ -65,11 +50,11 @@ public class Pizza {
     public String toString() {
         return "Pizza{" +
                 "name='" + name + '\'' +
-                ", ingredients='" + ingredients + '\'' +
+
                 ", calories=" + calories +
                 ", price=" + price +
                 '}';
     }
 
-     */
+
 }

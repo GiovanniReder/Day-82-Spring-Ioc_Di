@@ -8,10 +8,6 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 
 import java.util.List;
-@AllArgsConstructor
-@Getter
-@Setter
-@ToString
 @Component
 public class Menu {
     private List<Pizza> pizze;
@@ -19,49 +15,51 @@ public class Menu {
     private List<Toppings> toppings;
 
 
-/*
-    public Menu(List<Pizza> pizze, List<Toppings> toppings, List<Drinks> drinks) {
-        this.pizze = pizze;
-        this.toppings = toppings;
-        this.drinks = drinks;
-    }
-
-    public List<Pizza> getPizze() {
-        return pizze;
-    }
-
-    public void setPizze(List<Pizza> pizze) {
-        this.pizze = pizze;
-    }
-
-    public List<Toppings> getToppings() {
-        return toppings;
-    }
-
-    public void setToppings(List<Toppings> toppings) {
-        this.toppings = toppings;
-    }
-
-    public List<Drinks> getDrinks() {
-        return drinks;
-    }
-
-    public void setDrinks(List<Drinks> drinks) {
-        this.drinks = drinks;
-    }
 
 
 
-    @Override
-    public String toString() {
-        return "Menu{" +
-                "pizze=" + pizze +
-                ", drinks=" + drinks +
-                ", toppings=" + toppings +
-                '}';
-    }
+        public Menu(List<Pizza> pizze, List<Toppings> toppings, List<Drinks> drinks) {
+            this.pizze = pizze;
+            this.toppings = toppings;
+            this.drinks = drinks;
+        }
+    
+        public List<Pizza> getPizze() {
+            return pizze;
+        }
+    
+        public void setPizze(List<Pizza> pizze) {
+            this.pizze = pizze;
+        }
+    
+        public List<Toppings> getToppings() {
+            return toppings;
+        }
+    
+        public void setToppings(List<Toppings> toppings) {
+            this.toppings = toppings;
+        }
+    
+        public List<Drinks> getDrinks() {
+            return drinks;
+        }
+    
+        public void setDrinks(List<Drinks> drinks) {
+            this.drinks = drinks;
+        }
+    
+    
+    
+        @Override
+        public String toString() {
+            return "Menu{" +
+                    "pizze=" + pizze +
+                    ", drinks=" + drinks +
+                    ", toppings=" + toppings +
+                    '}';
+        }
+    
 
- */
 public void getMenu(){
 
         System.out.println("--------MENU-------");
